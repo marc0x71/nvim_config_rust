@@ -2,6 +2,8 @@
 
 Benvenuto in questa guida completa all'installazione e alla configurazione di Neovim 0.11 per lo sviluppo in Rust! 🦀
 
+<img width="3024" height="1964" alt="configurazione-newovim-rust" src="https://github.com/user-attachments/assets/1bcf3da2-0c38-48cd-a1e6-faa84c78460d" />
+
 Se sei uno sviluppatore Rust alla ricerca di un editor di testo che sia allo stesso tempo leggero, veloce e incredibilmente personalizzabile, Neovim è la scelta perfetta. Dimentica i pesanti IDE tradizionali: con questa guida, trasformeremo Neovim in un ambiente di sviluppo Rust moderno e produttivo, su misura per le tue esigenze.
 
 In questa guida vedremo come:
