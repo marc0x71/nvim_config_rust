@@ -48,6 +48,17 @@ sudo ln -s $(which fdfind) /usr/local/bin/fd 2>/dev/null || true
 
 ## Installazione di Neovim 0.11
 
+### Installazione su MacOS
+
+Per eseguire l'installazione di NeoVim, basterà:
+
+```bash
+brew update
+brew install neovim
+```
+
+### Installazione su GNU/Linux (Ubuntu)
+
 Per questa guida prendiamo come riferimento la distribuzione GNU/Linux Ubuntu.
 
 Installiamo Neovim tramite snap:
