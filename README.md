@@ -1,4 +1,4 @@
-# Guida Completa: Neovim 0.11 IDE per Rust su Ubuntu
+# Guida Completa: Neovim 0.11 IDE per Rust su Ubuntu/MacOS
 
 Benvenuto in questa guida completa all'installazione e alla configurazione di Neovim 0.11 per lo sviluppo in Rust! 🦀
 
