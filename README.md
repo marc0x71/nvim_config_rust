@@ -21,6 +21,7 @@ Alla fine di questo percorso, avrai una configurazione Neovim funzionale e perfo
 
 ## Prerequisiti e Dipendenze di Sistema
 
+### Installazione su GNU/Linux (Ubuntu)
 Prima di iniziare, installiamo tutte le dipendenze necessarie:
 
 ```bash
@@ -40,6 +41,23 @@ sudo apt install -y nodejs
 sudo ln -s $(which fdfind) /usr/local/bin/fd 2>/dev/null || true
 ```
 
+### MacOS
+
+Su macOS useremo Homebrew come package manager:
+
+```bash
+# Installa Homebrew se non già installato
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Installa Xcode Command Line Tools (contiene gcc, git, etc.)
+xcode-select --install
+
+# Dipendenze per i plugin
+brew install ripgrep fd
+
+# Node.js (opzionale, utile per altri linguaggi)
+brew install node
+```
 **Spiegazione delle dipendenze:**
 - **ripgrep**: ricerca velocissima nei file, usata da Telescope
 - **fd**: alternativa moderna a `find`, usata da Telescope
@@ -55,7 +73,6 @@ sudo ln -s $(which fdfind) /usr/local/bin/fd 2>/dev/null || true
 Per eseguire l'installazione di NeoVim, basterà:
 
 ```bash
-brew update
 brew install neovim
 ```
 
@@ -90,12 +107,21 @@ Build type: Release
 
 ### Metodo alternativo: Compilazione dai sorgenti
 
-Se preferisci compilare dai sorgenti per avere il controllo completo:
+Se preferisci compilare dai sorgenti per avere il controllo completo, su Ubuntu ti servirà:
 
 ```bash
 # Installa dipendenze di build
 sudo apt install -y ninja-build gettext cmake unzip
+```
+mentre su MacOS:
 
+```bash
+# Installa dipendenze di build
+brew install ninja cmake gettext
+```
+Possiamo ora compilare NeoVim per il nostro sistema:
+
+```bash
 # Scarica e compila
 mkdir -p ~/build && cd ~/build
 git clone https://github.com/neovim/neovim.git
@@ -1174,8 +1200,11 @@ Dopo l'installazione, riavvia Neovim e il warning sparirà. Ma ripeto: è purame
 which rg
 which fd
 
-# Se mancano, reinstalla
+# Ubuntu: Se mancano, reinstalla
 sudo apt install ripgrep fd-find
+
+# macOS: Se mancano, reinstalla
+brew install ripgrep fd
 ```
 
 ## Prossimi Passi e Personalizzazioni
@@ -1192,6 +1221,7 @@ Ora hai un IDE Rust **completo e professionale**! 🎉
 - ✅ Syntax highlighting avanzato
 - ✅ File explorer moderno (Oil)
 - ✅ Ricerca potente (Telescope)
+- ✅ Statusline informativa (Lualine)
 
 **Considera di aggiungere (opzionale):**
 
@@ -1199,9 +1229,8 @@ Ora hai un IDE Rust **completo e professionale**! 🎉
 2. **nvim-autopairs** - Chiusura automatica di parentesi/virgolette
 3. **Comment.nvim** - Commenta codice facilmente con `gc`
 4. **indent-blankline.nvim** - Mostra guide di indentazione
-5. **lualine.nvim** - Statusline bella e configurabile
-6. **nvim-colorizer.lua** - Evidenzia codici colore nel codice
-7. **rust-tools.nvim** - Tools extra per Rust (hover actions, ecc.)
+5. **nvim-colorizer.lua** - Evidenzia codici colore nel codice
+6. **rust-tools.nvim** - Tools extra per Rust (hover actions, ecc.)
 
 **Risorse utili:**
 - Documentazione Neovim: `:help` o https://neovim.io/doc/
