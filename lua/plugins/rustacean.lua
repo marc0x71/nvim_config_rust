@@ -1,6 +1,7 @@
 return {
   "mrcjkb/rustaceanvim",
-  version = "^5",
+  version = '^9',
+  lazy = false,
   ft = { "rust" },  -- Carica solo per file Rust
   config = function()
     vim.g.rustaceanvim = {
