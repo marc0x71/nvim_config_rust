@@ -148,9 +148,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source "$HOME/.cargo/env"
 
 # Installiamo i componenti necessari se non precedentemente installati
-rustup component add rust-analyzer  # LSP per Rust
-rustup component add rustfmt         # Formatter
-rustup component add clippy          # Linter
+rustup component add rust-analyzer clippy rustfmt rust-src
 
 # Verifichiamo l'installazione
 rustc --version
@@ -657,7 +655,7 @@ return {
     "nvim-treesitter/nvim-treesitter-textobjects",  -- Text objects avanzati
   },
   config = function()
-    require("nvim-treesitter.configs").setup({
+    require("nvim-treesitter").setup({
       -- Linguaggi da installare automaticamente
       ensure_installed = {
         "rust",
@@ -722,7 +720,7 @@ return {
 ```lua
 return {
     "nvim-telescope/telescope.nvim",
-    branch = "0.1.x",
+    version = "*",
     dependencies = {
         "nvim-lua/plenary.nvim",
         {
