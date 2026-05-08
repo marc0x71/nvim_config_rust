@@ -1,6 +1,6 @@
-# Guida Completa: Neovim 0.11 IDE per Rust su Ubuntu/MacOS
+# Guida Completa: Neovim 0.12 IDE per Rust su Ubuntu/MacOS
 
-Benvenuto in questa guida completa all'installazione e alla configurazione di Neovim 0.11 per lo sviluppo in Rust! 🦀
+Benvenuto in questa guida completa all'installazione e alla configurazione di Neovim 0.12 per lo sviluppo in Rust! 🦀
 
 <img width="3024" height="1964" alt="configurazione-newovim-rust" src="https://github.com/user-attachments/assets/1bcf3da2-0c38-48cd-a1e6-faa84c78460d" />
 
@@ -8,7 +8,7 @@ Se sei uno sviluppatore Rust alla ricerca di un editor di testo che sia allo ste
 
 In questa guida vedremo come:
 
-Installare l'ultima versione di Neovim (0.11).
+Installare l'ultima versione di Neovim (0.12).
 
 Configurare da zero un ambiente di sviluppo minimale utilizzando Lua.
 
@@ -66,7 +66,7 @@ brew install node
 
 ---
 
-## Installazione di Neovim 0.11
+## Installazione di Neovim 0.12
 
 ### Installazione su MacOS
 
@@ -83,7 +83,7 @@ Per questa guida prendiamo come riferimento la distribuzione GNU/Linux Ubuntu.
 Installiamo Neovim tramite snap:
 
 ```bash
-# Installa Neovim 0.11 tramite snap (flag --classic per accesso completo al sistema)
+# Installa Neovim 0.12 tramite snap (flag --classic per accesso completo al sistema)
 sudo snap install nvim --classic
 
 # Verifichiamo l'installazione
@@ -92,7 +92,7 @@ nvim --version
 
 Dovresti vedere output simile a:
 ```
-NVIM v0.11.4
+NVIM v0.12.4
 Build type: Release
 ...
 ```
@@ -126,7 +126,7 @@ Possiamo ora compilare NeoVim per il nostro sistema:
 mkdir -p ~/build && cd ~/build
 git clone https://github.com/neovim/neovim.git
 cd neovim
-git checkout v0.11.4
+git checkout v0.12.2
 make CMAKE_BUILD_TYPE=Release
 sudo make install
 ```
