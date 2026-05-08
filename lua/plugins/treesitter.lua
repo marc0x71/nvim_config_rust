@@ -6,7 +6,7 @@ return {
     "nvim-treesitter/nvim-treesitter-textobjects",  -- Text objects avanzati
   },
   config = function()
-    require("nvim-treesitter.configs").setup({
+    require("nvim-treesitter").setup({
       -- Linguaggi da installare automaticamente
       ensure_installed = {
         "rust",
